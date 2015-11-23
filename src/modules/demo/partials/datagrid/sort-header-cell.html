@@ -1,0 +1,6 @@
+<th ng-repeat="col in datagridCtrl.cols">
+	{{col.label}}
+	<button class="btn btn-xs glyphicon"
+	 ng-click="datagridCtrl.headerSort(col.key)"
+	 ng-class="{'glyphicon-triangle-bottom':!datagridCtrl.desc, 'glyphicon-triangle-top':datagridCtrl.desc}"></button>
+</th>

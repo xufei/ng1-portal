@@ -1,0 +1,4 @@
+<th ng-repeat-start="col in datagridCtrl.cols" ng-if="$first">
+	<input type="checkbox" ng-model="datagridCtrl.$allChecked" ng-change="datagridCtrl.checkAll()"/>
+</th>
+<th ng-repeat-end ng-if="!$first">{{col.label}}</th>
