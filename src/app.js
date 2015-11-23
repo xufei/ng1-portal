@@ -1,3 +1,3 @@
 import portal from "./modules/portal/index";
 
-angular.module("ngAdmin", ["sn.components", portal]);
+angular.module("ng.admin", ["sn.components", portal]);
