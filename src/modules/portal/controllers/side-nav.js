@@ -1,5 +1,6 @@
 export default class SideNavController {
 	constructor(PortalService) {
+		this.menuList = [];
 		this.menuTree = [];
 		this.menuMap = {};
 
@@ -20,12 +21,28 @@ export default class SideNavController {
 						parent.children = [];
 					}
 					parent.children.push(menuItem);
-					menuItem.parentMenu = parent;
+					menuItem.parent = parent;
 				}
 			});
 			
+			this.menuList = menus;
+			
 			console.log(this.menuTree);
 		});
+	}
+	
+	menuClick(menu, evt) {
+		this.menuList.forEach(item => {
+			if (item == menu) {
+				menu.$expanded = !menu.$expanded;
+			}
+			else {
+				if (item != menu.parent) {
+					delete item.$expanded;
+				}
+			}
+		});
+		evt.stopPropagation();
 	}
 }
 
