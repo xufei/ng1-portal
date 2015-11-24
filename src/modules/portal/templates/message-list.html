@@ -1,0 +1,27 @@
+<li class="dropdown" sn-dropdown ng-init="messageListCtrl.init()">
+	<a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+		<i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
+	</a>
+	<!-- /.dropdown -->
+	<ul class="dropdown-menu dropdown-messages">
+		<li ng-repeat-start="message in messageListCtrl.messageList">
+			<a href="#">
+				<div>
+					<strong>{{message.title}}</strong>
+					<span class="pull-right text-muted">
+						<em>{{message.date | fromNow}}</em>
+					</span>
+				</div>
+				<div>{{message.content}}</div>
+			</a>
+		</li>
+		<li ng-repeat-end class="divider"></li>
+		<li>
+			<a class="text-center" href="#">
+				<strong>Read All Messages</strong>
+				<i class="fa fa-angle-right"></i>
+			</a>
+		</li>
+	</ul>
+	<!-- /.dropdown-messages -->
+</li>
