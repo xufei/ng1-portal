@@ -1,0 +1,42 @@
+<div class="navbar-default sidebar" role="navigation" ng-init="sideNavCtrl.init()">
+	<div class="sidebar-nav navbar-collapse">
+		<ul class="nav in">
+			<li class="sidebar-search">
+				<div class="input-group custom-search-form">
+					<input type="text" class="form-control" placeholder="Search...">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="button">
+							<i class="fa fa-search"></i>
+						</button>
+					</span>
+				</div>
+				<!-- /input-group -->
+			</li>
+
+			<li ng-repeat="menu in sideNavCtrl.menuTree">
+				<a href="#">
+					<i class="fa fa-fw" ng-class="menu.icon">
+					</i> {{menu.name}}
+					<span ng-if="menu.children" class="fa arrow"></span>
+					<ul ng-if="menu.children" class="nav nav-second-level" ng-class="{'collapse':menu.$collapsed}">
+						<li ng-repeat="child in menu.children">
+							<a href="#">
+								{{child.name}}
+                				<span ng-if="child.children" class="fa arrow"></span>
+								<ul ng-if="child.children" class="nav nav-third-level"
+								    ng-class="{'collapse':child.$collapsed}">
+									<li ng-repeat="grandson in child.children">
+										<a href="#">
+											{{grandson.name}}
+										</a>
+									</li>
+								</ul>
+							</a>
+						</li>
+					</ul>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- /.sidebar-collapse -->
+</div>

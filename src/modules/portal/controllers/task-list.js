@@ -1,4 +1,4 @@
-export default class TaskList {
+export default class TaskListController {
 	constructor(PortalService) {
 		this.taskList = [];
 		
@@ -16,4 +16,4 @@ export default class TaskList {
 	}
 }
 
-TaskList.$inject = ["PortalService"];
+TaskListController.$inject = ["PortalService"];

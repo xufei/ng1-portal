@@ -6,6 +6,7 @@ export default class PortalService {
 		this.messageList = [];
 		this.taskList = [];
 		this.alertList = [];
+		this.menuList = [];
 	}
 	
 	getMessageList() {
@@ -79,8 +80,39 @@ export default class PortalService {
 		return defer.promise;
 	}
 	
-	addAlert(item) {
-		this.alertList.push(item);
+	getMenuList() {
+		this.menuList = [
+			{code: "0", name: "Dashboard", icon:"fa-dashboard"},,
+			{code: "1", name: "Charts", icon:"fa-bar-chart-o"},
+			{code: "2", name: "Tables", icon:"fa-table"},
+			{code: "3", name: "Forms", icon:"fa-edit"},
+			{code: "4", name: "UI Elements", icon:"fa-wrench"},
+			{code: "5", name: "Multi-Level Dropdown", icon:"fa-sitemap"},
+			{code: "6", name: "Sample Pages", icon:"fa-files-o"},
+			
+			{code: "10", parent:"1", name: "Flot Charts"},
+			{code: "11", parent:"1", name: "Morris.js Charts"},
+			{code: "40", parent:"4", name: "Panels and Wells"},
+			{code: "41", parent:"4", name: "Buttons"},
+			{code: "42", parent:"4", name: "Notifications"},
+			{code: "43", parent:"4", name: "Typography"},
+			{code: "44", parent:"4", name: "Icons"},
+			{code: "45", parent:"4", name: "Grid"},
+			{code: "50", parent:"5", name: "Second Level Item"},
+			{code: "51", parent:"5", name: "Second Level Item"},
+			{code: "52", parent:"5", name: "Third Level"},
+			{code: "60", parent:"6", name: "Blank Page"},
+			{code: "61", parent:"6", name: "Login Page"},
+			
+			{code: "520", parent:"52", name: "Third Level Item"},
+			{code: "521", parent:"52", name: "Third Level Item"},
+			{code: "522", parent:"52", name: "Third Level Item"},
+			{code: "523", parent:"52", name: "Third Level Item"}
+		];
+		
+		let defer = this.$q.defer();
+		defer.resolve(this.menuList);
+		return defer.promise;
 	}
 }
 

@@ -1,4 +1,4 @@
-export default class MessageList {
+export default class MessageListController {
 	constructor(PortalService) {
 		this.messageList = [];
 		
@@ -10,4 +10,4 @@ export default class MessageList {
 	}
 }
 
-MessageList.$inject = ["PortalService"];
+MessageListController.$inject = ["PortalService"];
