@@ -9,8 +9,5 @@ export default class MessageListDirective {
 		this.replace = true;
 		this.controller = MessageListController;
 		this.controllerAs = "messageListCtrl";
-
-		this.scope = {
-		};
 	}
 }
