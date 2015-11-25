@@ -1,8 +1,8 @@
-import template from "../templates/task-list.html";
+import template from "../templates/task-dropdown.html";
 
 import TaskListController from "../controllers/task-list";
 
-export default class TaskListDirective {
+export default class TaskDropdownDirective {
 	constructor() {
 		this.template = template;
 		this.restrict = "E";

@@ -1,8 +1,8 @@
-import template from "../templates/alert-list.html";
+import template from "../templates/alert-dropdown.html";
 
 import AlertListController from "../controllers/alert-list";
 
-export default class AlertListDirective {
+export default class AlertDropdownDirective {
 	constructor() {
 		this.template = template;
 		this.restrict = "E";

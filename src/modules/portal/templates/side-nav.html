@@ -13,7 +13,7 @@
 			</li>
 
 			<li ng-repeat="menu in sideNavCtrl.menuTree">
-				<a href="#" ng-click="sideNavCtrl.menuClick(menu, $event)">
+				<a ui-sref="{{menu.state}}" ng-click="sideNavCtrl.menuClick(menu, $event)">
 					<i class="fa fa-fw" ng-class="menu.icon"></i>{{menu.name}}
 					<i ng-if="menu.children" class="fa arrow"></i>
 				</a>

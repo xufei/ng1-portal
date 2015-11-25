@@ -82,9 +82,9 @@ export default class PortalService {
 	
 	getMenuList() {
 		this.menuList = [
-			{code: "0", name: "Dashboard", icon:"fa-dashboard"},,
+			{code: "0", name: "Dashboard", icon:"fa-dashboard", state: "Dashboard"},
 			{code: "1", name: "Charts", icon:"fa-bar-chart-o"},
-			{code: "2", name: "Tables", icon:"fa-table"},
+			{code: "2", name: "Messages", icon:"fa-table", state: "Messages"},
 			{code: "3", name: "Forms", icon:"fa-edit"},
 			{code: "4", name: "UI Elements", icon:"fa-wrench"},
 			{code: "5", name: "Multi-Level Dropdown", icon:"fa-sitemap"},
