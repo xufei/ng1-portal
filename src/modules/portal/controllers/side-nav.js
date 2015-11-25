@@ -26,8 +26,6 @@ export default class SideNavController {
 			});
 			
 			this.menuList = menus;
-			
-			console.log(this.menuTree);
 		});
 	}
 	
@@ -42,6 +40,7 @@ export default class SideNavController {
 				}
 			}
 		});
+		
 		evt.stopPropagation();
 	}
 }
