@@ -2,6 +2,7 @@
 
 .sidebar {
     min-height: 2000px;
+    border-right: 1px solid #e7e7e7;
 }
 
 .sidebar .sidebar-nav.navbar-collapse {

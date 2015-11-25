@@ -6,8 +6,5 @@ export default class TopNavDirective {
 	constructor() {
 		this.template = template;
 		this.restrict = "E";
-
-		this.scope = {
-		};
 	}
 }
