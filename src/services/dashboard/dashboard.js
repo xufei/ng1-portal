@@ -1,4 +1,4 @@
-export default class PortalService {
+export default class DashboardService {
 	constructor($http, $q) {
 		this.$http = $http;
 		this.$q = $q;
@@ -83,12 +83,12 @@ export default class PortalService {
 	getMenuList() {
 		this.menuList = [
 			{code: "0", name: "Dashboard", icon:"fa-dashboard", state: "Dashboard"},
-			{code: "1", name: "Charts", icon:"fa-bar-chart-o", state: "Charts"},
+			{code: "1", name: "Charts", icon:"fa-bar-chart-o"},
 			{code: "2", name: "Messages", icon:"fa-table", state: "Messages"},
-			{code: "3", name: "Forms", icon:"fa-edit", state: "Forms"},
-			{code: "4", name: "UI Elements", icon:"fa-wrench", state: "UI Elements"},
-			{code: "5", name: "Multi-Level Dropdown", icon:"fa-sitemap", state: "Multi-Level Dropdown"},
-			{code: "6", name: "Sample Pages", icon:"fa-files-o", state: "Sample Pages"},
+			{code: "3", name: "Forms", icon:"fa-edit"},
+			{code: "4", name: "UI Elements", icon:"fa-wrench"},
+			{code: "5", name: "Multi-Level Dropdown", icon:"fa-sitemap"},
+			{code: "6", name: "Sample Pages", icon:"fa-files-o"},
 			
 			{code: "10", parent:"1", name: "Flot Charts"},
 			{code: "11", parent:"1", name: "Morris.js Charts"},
@@ -116,4 +116,4 @@ export default class PortalService {
 	}
 }
 
-PortalService.$inject = ["$http", "$q"];
+DashboardService.$inject = ["$http", "$q"];

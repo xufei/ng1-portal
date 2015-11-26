@@ -15,6 +15,26 @@ angular.module("ng.admin", ["ui.router", "sn.components", services, filters, mod
 				url: "/messages",
 				template: "<sn-message-list></sn-message-list>"
 			})
+			.state("Charts", {
+				url: "/charts",
+				template: "<h1>Charts</h1>"
+			})
+			.state("Forms", {
+				url: "/forms",
+				template: "<h1>Forms</h1>"
+			})
+			.state("UI Elements", {
+				url: "/ui-elements",
+				template: "<h1>UI Elements</h1>"
+			})
+			.state("Multi-Level Dropdown", {
+				url: "/multi-level",
+				template: "<h1>Multi-Level Dropdown</h1>"
+			})
+			.state("Sample Pages", {
+				url: "/sample-pages",
+				template: "<h1>Sample Pages</h1>"
+			})
 			/*
 			.state('state2.list', {
 				url: "/list",
