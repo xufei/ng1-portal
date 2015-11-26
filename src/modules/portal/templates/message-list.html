@@ -1,81 +1,28 @@
-<div class="row">
-	<div class="col-lg-12">
-		
-		<h1 class="page-header">Messages</h1>
-		
-		<div class="panel panel-default" ng-init="messageListCtrl.init()">
-			<div class="panel-heading">
-				All Messages
-			</div>
-			<!-- /.panel-heading -->
-			<div class="panel-body">
-				<div class="dataTable_wrapper">
-					<div id="dataTables-example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
-						<div class="row">
-							<div class="col-sm-6">
-								<div class="dataTables_length" id="dataTables-example_length">
-									<label>Show
-										<select name="dataTables-example_length" aria-controls="dataTables-example" class="form-control input-sm">
-											<option value="10">10</option>
-											<option value="25">25</option>
-											<option value="50">50</option>
-											<option value="100">100</option>
-										</select> entries</label>
-								</div>
-							</div>
-							<div class="col-sm-6">
-								<div id="dataTables-example_filter" class="dataTables_filter">
-									<label>Search:
-										<input type="search" class="form-control input-sm" placeholder="" aria-controls="dataTables-example">
-									</label>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-12">
-								<table class="table table-striped table-bordered table-hover dataTable no-footer" id="dataTables-example" role="grid"
-								aria-describedby="dataTables-example_info">
-									<thead>
-										<tr role="row">
-											<th class="sorting_asc" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Rendering engine: activate to sort column descending"
-											aria-sort="ascending" style="width: 184px;">Rendering engine</th>
-											<th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1"
-											aria-label="Browser: activate to sort column ascending" style="width: 222px;">Browser</th>
-											<th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending"
-											style="width: 206px;">Platform(s)</th>
-											<th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending"
-											style="width: 159px;">Engine version</th>
-											<th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1"
-											aria-label="CSS grade: activate to sort column ascending" style="width: 124px;">CSS grade</th>
-										</tr>
-									</thead>
-									<tbody>
+<div>
+	<h1 class="page-header">Messages <small>messages received</small></h1>
 
-										<tr class="gradeA odd" role="row" ng-repeat="message in messageListCtrl.messageList">
-											<td class="sorting_1">Gecko</td>
-											<td>{{message.title}}</td>
-											<td>{{message.content}}</td>
-											<td class="center">{{message.date | fromNow}}</td>
-											<td class="center">A</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-6">
-								<div class="dataTables_info" id="dataTables-example_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div>
-							</div>
-							<div class="col-sm-6">
-								<sn-pager count="177"></sn-pager>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- /.panel-body -->
+	<div class="panel panel-default" ng-init="messageListCtrl.init()">
+		<div class="panel-heading">
+			All Messages
 		</div>
-		<!-- /.panel -->
+		<!-- /.panel-heading -->
+		<div class="panel-body">
+			<div class="row">
+				<form class="navbar-form navbar-left" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+					<button type="submit" class="btn btn-default">
+						<i class="glyphicon glyphicon-search"></i>
+					</button>
+				</form>
+			</div>
+
+			<sn-datagrid type="'sortable'" grid-cols="messageListCtrl.messageCols" grid-data="messageListCtrl.messageList"></sn-datagrid>
+
+			<sn-pager count="177"></sn-pager>
+		</div>
+		<!-- /.panel-body -->
 	</div>
-	<!-- /.col-lg-12 -->
+	<!-- /.panel -->
 </div>
