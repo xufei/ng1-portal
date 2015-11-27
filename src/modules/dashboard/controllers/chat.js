@@ -1,26 +1,21 @@
-
-
 export default class ChatController {
-	constructor(ChatService) {
+	constructor(ChatService, $scope) {
 		this.ChatService = ChatService;
-		
+		this.$scope = $scope
+
 		this.chatList = [];
-		this.newMessage = {
-			content: "aaa"
-		};
+		this.newMessage = "";
 	}
-	
+
 	init() {
-		this.ChatService.getChatList().then(result => this.chatList=result);
+		this.ChatService.getChatList().then(result => this.chatList = result);
 	}
-	
+
 	sendMessage() {
 		this.ChatService.sendMessage(this.newMessage);
-		
-		this.newMessage = {
-			content: ""
-		};
+
+		this.newMessage = "";
 	}
 }
 
-ChatController.$inject = ["ChatService"];
+ChatController.$inject = ["ChatService", "$scope"];

@@ -27,7 +27,6 @@
 	</div>
 	<!-- /.panel-heading -->
 	<div class="panel-body">
-			{{charCtrl.newMessage}}
 		<ul class="chat">
 			<li class="clearfix" ng-repeat="message in chatCtrl.chatList" ng-class-even="'left'" ng-class-odd="'right'">
 				<span class="chat-img" ng-class-even="'pull-left'" ng-class-odd="'pull-right'">
@@ -48,7 +47,7 @@
 	<!-- /.panel-body -->
 	<div class="panel-footer">
 		<div class="input-group">
-			<input type="text" class="form-control input-sm" placeholder="Type your message here..." ng-model="charCtrl.newMessage.content">
+			<input type="text" class="form-control input-sm" placeholder="Type your message here..." ng-model="chatCtrl.newMessage">
 			<span class="input-group-btn">
 				<button class="btn btn-warning btn-sm" ng-click="chatCtrl.sendMessage()">Send</button>
 			</span>

@@ -31,10 +31,11 @@ export default class ChatService {
 	}
 	
 	sendMessage(message) {
-		message.from = "Sun Wukong";
-		message.date = new Date();
-		
-		this.chatList.push(message);
+		this.chatList.push({
+			from: "Sun Wukong",
+			content: message,
+			date: new Date()
+		});
 	}
 }
 
