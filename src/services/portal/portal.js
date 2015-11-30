@@ -7,6 +7,8 @@ export default class PortalService {
 		this.taskList = [];
 		this.alertList = [];
 		this.menuList = [];
+		
+		console.log(111);
 	}
 	
 	getMessageList() {
