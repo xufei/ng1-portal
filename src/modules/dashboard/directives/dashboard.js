@@ -8,7 +8,7 @@ export default class DashboardDirective {
 	constructor() {
 		this.template = template;
 		this.restrict = "E";
-		//this.controller = DashboardController;
-		//this.controllerAs = "dashboardCtrl";
+		this.controller = DashboardController;
+		this.controllerAs = "dashboardCtrl";
 	}
 }

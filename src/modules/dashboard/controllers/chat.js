@@ -1,7 +1,6 @@
 export default class ChatController {
-	constructor(ChatService, $scope) {
+	constructor(ChatService) {
 		this.ChatService = ChatService;
-		this.$scope = $scope
 
 		this.chatList = [];
 		this.newMessage = "";
@@ -18,4 +17,4 @@ export default class ChatController {
 	}
 }
 
-ChatController.$inject = ["ChatService", "$scope"];
+ChatController.$inject = ["ChatService"];

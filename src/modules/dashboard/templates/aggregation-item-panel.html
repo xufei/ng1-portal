@@ -1,0 +1,20 @@
+<div class="panel" ng-class="'panel-' + data.theme">
+	<div class="panel-heading">
+		<div class="row">
+			<div class="col-xs-3">
+				<i class="fa fa-5x" ng-class="data.icon"></i>
+			</div>
+			<div class="col-xs-9 text-right">
+				<div class="huge">{{data.count}}</div>
+				<div>{{data.content}}</div>
+			</div>
+		</div>
+	</div>
+	<div class="panel-footer">
+		<span class="pull-left">
+			<a ui-sref="{{data.state}}">View Details</a>
+		</span>
+		<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+		<div class="clearfix"></div>
+	</div>
+</div>
