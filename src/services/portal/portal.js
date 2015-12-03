@@ -85,7 +85,7 @@ export default class PortalService {
 			{code: "0", name: "Dashboard", icon:"fa-dashboard", state: "Dashboard"},
 			{code: "1", name: "Charts", icon:"fa-bar-chart-o", state: "Charts"},
 			{code: "2", name: "Messages", icon:"fa-table", state: "Messages"},
-			{code: "3", name: "Forms", icon:"fa-edit", state: "Forms"},
+			{code: "3", name: "Employees", icon:"fa-user", state: "Employees"},
 			{code: "4", name: "UI Elements", icon:"fa-wrench", state: "UI Elements"},
 			{code: "5", name: "Multi-Level Dropdown", icon:"fa-sitemap", state: "Multi-Level Dropdown"},
 			{code: "6", name: "Sample Pages", icon:"fa-files-o", state: "Sample Pages"},

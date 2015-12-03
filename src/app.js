@@ -19,9 +19,9 @@ angular.module("ng.admin", ["ui.router", "sn.components", services, filters, mod
 				url: "/charts",
 				template: "<h1>Charts</h1>"
 			})
-			.state("Forms", {
-				url: "/forms",
-				template: "<h1>Forms</h1>"
+			.state("Employees", {
+				url: "/employee-list",
+				template: "<sn-employee-list></sn-employee-list>"
 			})
 			.state("UI Elements", {
 				url: "/ui-elements",

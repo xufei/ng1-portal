@@ -1,0 +1,13 @@
+import template from "../templates/employee-list.html";
+
+import EmployeeListController from "../controllers/employee-list";
+
+export default class EmployeeListDirective {
+	constructor() {
+		this.template = template;
+		this.restrict = "E";
+		this.replace = true;
+		this.controller = EmployeeListController;
+		this.controllerAs = "employeeListCtrl";
+	}
+}
