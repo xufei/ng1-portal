@@ -7,7 +7,11 @@ export default class EmployeeListController {
 	}
 
 	init() {
-		this.EmployeeService.getEmployeeList(0, 10).then(result => {
+		this.getEmployeeList(0);
+	}
+	
+	getEmployeeList(index) {
+		this.EmployeeService.getEmployeeList(index, 10).then(result => {
 			this.employeeList = result.employeeList;
 			this.total = result.total;
 		});

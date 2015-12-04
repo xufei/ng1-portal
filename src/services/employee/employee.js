@@ -10,8 +10,8 @@ export default class EmployeeService {
 		}));
 	}
 	
-	getEmployeeList(startIndex, pageSize) {
-		let employeeList = this.employeeList.slice(startIndex, pageSize);
+	getEmployeeList(pageIndex, pageSize) {
+		let employeeList = this.employeeList.slice(pageIndex * pageSize, pageIndex * pageSize + pageSize);
 		
 		let defer = this.$q.defer();
 		defer.resolve({

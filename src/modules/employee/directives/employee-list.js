@@ -10,4 +10,12 @@ export default class EmployeeListDirective {
 		this.controller = EmployeeListController;
 		this.controllerAs = "employeeListCtrl";
 	}
+	
+	link(scope, element, attrs) {
+		scope.$watch("employeeListCtrl.currentPage", page => {
+			if (page) {
+				scope.employeeListCtrl.getEmployeeList(page.index);
+			}
+		});
+	}
 }
