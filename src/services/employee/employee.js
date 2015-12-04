@@ -28,6 +28,14 @@ export default class EmployeeService {
 		defer.resolve(employee);
 		return defer.promise;
 	}
+	
+	deleteEmployee(employee) {
+		this.employeeList = this.employeeList.filter(it => it!=employee);
+		
+		let defer = this.$q.defer();
+		defer.resolve();
+		return defer.promise;
+	}
 }
 
 EmployeeService.$inject = ["$http", "$q"];
