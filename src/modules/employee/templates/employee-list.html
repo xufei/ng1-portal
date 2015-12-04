@@ -26,7 +26,7 @@
 			<tr ng-repeat="employee in employeeListCtrl.employeeList">
 				<td>{{employee.name}}</td>
 				<td>{{employee.age}}</td>
-				<td>{{employee.gender}}</td>
+				<td>{{employee.gender | gender}}</td>
 			</tr>
 		</tbody>
 	</table>

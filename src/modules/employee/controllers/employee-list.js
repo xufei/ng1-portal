@@ -1,6 +1,9 @@
+import newDialogTpl from "../templates/new-employee-dialog.html";
+
 export default class EmployeeListController {
-	constructor(EmployeeService) {
+	constructor(EmployeeService, DialogService) {
 		this.EmployeeService = EmployeeService;
+		this.DialogService = DialogService;
 
 		this.employeeList = [];
 		this.total = 0;
@@ -16,6 +19,14 @@ export default class EmployeeListController {
 			this.total = result.total;
 		});
 	}
+	
+	newEmployee() {
+		this.DialogService.modal({
+			key: "sn.portal.employee.NewEmployeeDialog",
+			template: newDialogTpl,
+			accept: result => this.employeeList.push(result)
+		});
+	}
 }
 
-EmployeeListController.$inject = ["EmployeeService"];
+EmployeeListController.$inject = ["EmployeeService", "DialogService"];
