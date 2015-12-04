@@ -1,8 +1,8 @@
-<div class="modal fade in" ng-controller="NewEmployeeDialogController as dialogCtrl">
+<div class="modal fade in" ng-controller="NewEmployeeDialogController as dialogCtrl" ng-init="dialogCtrl.dialog=dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" ng-click="dialogCtrl.close()"><span
+				<button type="button" class="close" data-dismiss="modal" ng-click="dialog.close()"><span
 						aria-hidden="true">&times;</span><span
 						class="sr-only">Close</span></button>
 				<h4 class="modal-title">New Employee</h4>
@@ -37,7 +37,7 @@
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-primary" ng-click="dialogCtrl.ok()">OK</button>
-				<button type="button" class="btn btn-primary" ng-click="dialogCtrl.cancel()">Cancel</button>
+				<button type="button" class="btn btn-primary" ng-click="dialog.cancel()">Cancel</button>
 			</div>
 		</div>
 	</div>

@@ -21,11 +21,7 @@ export default class EmployeeListController {
 	}
 	
 	newEmployee() {
-		this.DialogService.modal({
-			key: "sn.portal.employee.NewEmployeeDialog",
-			template: newDialogTpl,
-			accept: result => this.employeeList.push(result)
-		});
+		this.DialogService.modal(newDialogTpl, null, result => this.employeeList.push(result));
 	}
 }
 
