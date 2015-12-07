@@ -19,7 +19,7 @@
 				</a>
 				<ul ng-if="menu.children" class="nav nav-second-level" ng-class="{'collapse':!menu.$expanded}">
 					<li ng-repeat="child in menu.children">
-						<a href="#" ng-click="sideNavCtrl.menuClick(child, $event)">
+						<a ui-sref="{{child.state}}" ng-click="sideNavCtrl.menuClick(child, $event)">
 							{{child.name}}
 							<i ng-if="child.children" class="fa arrow"></i>
 						</a>

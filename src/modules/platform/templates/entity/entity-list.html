@@ -1,0 +1,36 @@
+<div class="panel panel-default" ng-init="entityListCtrl.init()">
+	<div class="panel-heading">
+		<span>Entities</span>
+	</div>
+	<div class="panel-body">
+		<ul class="list-group">
+			<li ng-repeat="entity in entityListCtrl.entityList"
+				ng-class="{'active':entity==entityListCtrl.selectedEntity}"
+				ng-click="entityListCtrl.selectEntity(entity)"
+				class="list-group-item">
+				<span>{{entity.name}}</span>
+			</li>
+		</ul>
+	</div>
+	<div class="panel-footer">
+		<div class="row">
+			<form class="navbar-form navbar-left" role="search">
+				<!--div class="form-group">
+					<input type="text" class="form-control" placeholder="Search">
+					<button type="submit" class="btn btn-default">
+						<i class="glyphicon glyphicon-search"></i>
+					</button>
+				</div-->
+				<div class="form-group">
+					<button ng-click="entityListCtrl.newEntity()"
+						class="btn btn-sm btn-primary">New</button>
+				</div>
+				<div class="form-group">
+					<button ng-click="entityListCtrl.deleteEntity()"
+						ng-disabled="!entityListCtrl.selectedEntity"
+						class="btn btn-sm btn-danger">Delete</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

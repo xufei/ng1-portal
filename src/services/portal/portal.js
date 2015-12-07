@@ -83,15 +83,17 @@ export default class PortalService {
 	getMenuList() {
 		this.menuList = [
 			{code: "0", name: "Dashboard", icon:"fa-dashboard", state: "Dashboard"},
-			{code: "1", name: "Charts", icon:"fa-bar-chart-o", state: "Charts"},
+			{code: "1", name: "Platform", icon:"fa-bar-chart-o", state: "Platform"},
 			{code: "2", name: "Messages", icon:"fa-table", state: "Messages"},
 			{code: "3", name: "Employees", icon:"fa-user", state: "Employees"},
 			{code: "4", name: "UI Elements", icon:"fa-wrench", state: "UI Elements"},
 			{code: "5", name: "Multi-Level Dropdown", icon:"fa-sitemap", state: "Multi-Level Dropdown"},
 			{code: "6", name: "Sample Pages", icon:"fa-files-o", state: "Sample Pages"},
 			
-			{code: "10", parent:"1", name: "Flot Charts"},
-			{code: "11", parent:"1", name: "Morris.js Charts"},
+			{code: "10", parent:"1", name: "Entity Management", state: "Entity"},
+			{code: "11", parent:"1", name: "Rule Management"},
+			{code: "12", parent:"1", name: "Workflow Management"},
+			{code: "13", parent:"1", name: "UI Builder"},
 			{code: "40", parent:"4", name: "Panels and Wells"},
 			{code: "41", parent:"4", name: "Buttons"},
 			{code: "42", parent:"4", name: "Notifications"},

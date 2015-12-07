@@ -15,10 +15,16 @@ angular.module("ng.admin", ["ui.router", "sn.components", services, filters, mod
 				url: "/messages",
 				template: "<sn-message-list></sn-message-list>"
 			})
-			.state("Charts", {
-				url: "/charts",
-				template: "<h1>Charts</h1>"
+			
+			.state("Platform", {
+				url: "/platform",
+				template: "<h1>Platform</h1>"
 			})
+			.state("Entity", {
+				url: "/entity",
+				template: "<sn-entity-manage></sn-entity-manage>"
+			})
+			
 			.state("Employees", {
 				url: "/employee-list",
 				template: "<sn-employee-list></sn-employee-list>"
