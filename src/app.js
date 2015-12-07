@@ -24,6 +24,11 @@ angular.module("ng.admin", ["ui.router", "sn.components", services, filters, mod
 				url: "/entity",
 				template: "<sn-entity-manage></sn-entity-manage>"
 			})
+			.state("Rule", {
+				url: "/rule",
+				template: "<sn-rule-manage></sn-rule-manage>"
+			})
+			
 			
 			.state("Employees", {
 				url: "/employee-list",

@@ -4,8 +4,8 @@ export default class EntityService {
 		this.$q = $q;
 
 		this.entityList = [
-			{name:"Order"},
-			{name:"User"}
+			{name:"User"},
+			{name:"Order"}
 		];
 	}
 
@@ -53,6 +53,32 @@ export default class EntityService {
 	}
 	
 	deleteProperty(property) {
+		
+	}
+	
+	getRulesByEntity(entity) {
+		let rules = [
+			{name: "getFullName", returnType: "string", params: [
+				{name: "firstName", type: "string"},
+				{name: "lastName", type: "string"}
+			], body: "return firstName + lastName;"},
+			{name: "ageIsValid", returnType: "boolean", params: [], body: "return this.age > 0"}
+		];
+		
+		let defer = this.$q.defer();
+		defer.resolve(rules);
+		return defer.promise;
+	}
+	
+	addRule(entity, rule) {
+		
+	}
+	
+	modifyRule(rule) {
+		
+	}
+	
+	deleteRule(rule) {
 		
 	}
 }
