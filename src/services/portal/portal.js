@@ -92,7 +92,7 @@ export default class PortalService {
 			
 			{code: "10", parent:"1", name: "Entity Management", state: "Entity"},
 			{code: "11", parent:"1", name: "Rule Management"},
-			{code: "12", parent:"1", name: "Workflow Management"},
+			{code: "12", parent:"1", name: "Workflow Management", state: "Flow"},
 			{code: "13", parent:"1", name: "UI Builder"},
 			{code: "40", parent:"4", name: "Panels and Wells"},
 			{code: "41", parent:"4", name: "Buttons"},
