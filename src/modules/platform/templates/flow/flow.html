@@ -1,3 +1,10 @@
 <div ng-init="flowCtrl.init()">
+	<div>
+		a: {{flowCtrl.flow.context.a}}
+	</div>
+	<div>
+		b: {{flowCtrl.flow.context.b}}
+	</div>
 	<button class="btn btn-default" ng-click="flowCtrl.start()">Start</button>
+	<button class="btn btn-default" ng-click="flowCtrl.step()">Step</button>
 </div>

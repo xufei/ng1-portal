@@ -30,6 +30,25 @@ export default class FlowService {
 		defer.resolve(flow);
 		return defer.promise;
 	}
+	
+	getAnotherFlow() {
+		let defer = this.$q.defer();
+		let flow = createFlow({
+			name: "Euclid",
+			activities: [
+				{id: "a00", type:"start", action: "this.a=72; this.b=45;"},
+				{id: "a01", type:"normal", action: "var temp=this.a%this.b; this.a=this.b; this.b=temp;"},
+				{id: "a02", type: "finish", action: "alert(this.b);"}
+			],
+			transitions: [
+				{id: "b00", from: "a00", to: "a01", condition: "return true"},
+				{id: "b01", from: "a01", to: "a01", condition: "return this.a%this.b!=0"},
+				{id: "b02", from: "a01", to: "a02", condition: "return this.a%this.b==0"}
+			]
+		});
+		defer.resolve(flow);
+		return defer.promise;
+	}
 }
 
 FlowService.$inject = ["$http", "$q"];

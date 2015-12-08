@@ -10,6 +10,10 @@ export default class FlowController {
 	start() {
 		this.flow.execute();
 	}
+	
+	step() {
+		this.flow.executeStep();
+	}
 }
 
 FlowController.$inject = ["FlowService"];
