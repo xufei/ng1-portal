@@ -13,20 +13,20 @@
 			</li>
 
 			<li ng-repeat="menu in sideNavCtrl.menuTree">
-				<a ui-sref="{{menu.state}}" ng-click="sideNavCtrl.menuClick(menu, $event)">
+				<a ui-sref="{{menu.state || 'default'}}" ng-click="sideNavCtrl.menuClick(menu, $event)">
 					<i class="fa fa-fw" ng-class="menu.icon"></i>{{menu.name}}
 					<i ng-if="menu.children" class="fa arrow"></i>
 				</a>
 				<ul ng-if="menu.children" class="nav nav-second-level" ng-class="{'collapse':!menu.$expanded}">
 					<li ng-repeat="child in menu.children">
-						<a ui-sref="{{child.state}}" ng-click="sideNavCtrl.menuClick(child, $event)">
+						<a ui-sref="{{child.state || 'default'}}" ng-click="sideNavCtrl.menuClick(child, $event)">
 							{{child.name}}
 							<i ng-if="child.children" class="fa arrow"></i>
 						</a>
 						<ul ng-if="child.children" class="nav nav-third-level"
 							ng-class="{'collapse':!child.$expanded}">
 							<li ng-repeat="grandson in child.children">
-								<a href="#">{{grandson.name}}</a>
+								<a ui-sref="{{grandson.state || 'default'}}">{{grandson.name}}</a>
 							</li>
 						</ul>
 					</li>

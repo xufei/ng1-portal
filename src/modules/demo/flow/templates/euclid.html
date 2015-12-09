@@ -1,0 +1,30 @@
+<div class="panel panel-default" ng-init="euclidCtrl.init()">
+	<div class="panel-heading">
+		Euclid
+	</div>
+	<div class="panel-body">
+		<form class="form-horizontal">
+			<div class="form-group">
+				<label class="col-sm-2 control-label">First Number</label>
+				<div class="col-sm-10">
+					<input type="number" class="form-control" placeholder="First Number" ng-model="euclidCtrl.flow.context.a">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Second Number</label>
+				<div class="col-sm-10">
+					<input type="number" class="form-control" placeholder="Second Number" ng-model="euclidCtrl.flow.context.b">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Result</label>
+				<p class="col-sm-10 form-control-static">
+					{{euclidCtrl.flow.context.result}}
+				</p>
+			</div>
+		</form>
+	</div>
+	<div class="panel-footer">
+		<button class="btn btn-sm btn-primary" ng-click="euclidCtrl.next()">Next</button>
+	</div>
+</div>

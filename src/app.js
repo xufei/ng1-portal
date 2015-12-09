@@ -24,11 +24,6 @@ angular.module("ng.admin", ["ui.router", "sn.components", services, filters, mod
 				url: "/entity",
 				template: "<sn-entity-manage></sn-entity-manage>"
 			})
-			.state("Flow", {
-				url: "/flow",
-				template: "<sn-flow></sn-flow>"
-			})
-			
 			
 			.state("Employees", {
 				url: "/employee-list",
@@ -38,10 +33,21 @@ angular.module("ng.admin", ["ui.router", "sn.components", services, filters, mod
 				url: "/ui-elements",
 				template: "<h1>UI Elements</h1>"
 			})
-			.state("Multi-Level Dropdown", {
-				url: "/multi-level",
-				template: "<h1>Multi-Level Dropdown</h1>"
+			.state("Demos", {
+				url: "/demos",
+				template: "<h1>Demos</h1>"
 			})
+			
+			.state("Euclid", {
+				url: "/euclid",
+				template: "<sn-euclid></sn-euclid>"
+			})
+			.state("Choice", {
+				url: "/choice",
+				template: "<sn-choice></sn-choice>"
+			})
+			
+			
 			.state("Sample Pages", {
 				url: "/sample-pages",
 				template: "<h1>Sample Pages</h1>"

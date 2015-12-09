@@ -1,0 +1,19 @@
+<div class="panel panel-default" ng-init="choiceCtrl.init()">
+	<div class="panel-heading">
+		Make Choice
+	</div>
+	<div class="panel-body">
+		<h3>Follow your heart: </h3>
+		
+		<ul class="list-group">
+			<li class="list-group-item"
+				ng-repeat="choice in choiceCtrl.flow.context.choices"
+				ng-click="choiceCtrl.flow.context.currentChoice=choice">
+				<a href="javascript:void(0)">choice.label</a>
+			</li>
+		</ul>
+	</div>
+	<div class="panel-footer">
+		<button class="btn btn-sm btn-primary" ng-click="choiceCtrl.next()">Next</button>
+	</div>
+</div>

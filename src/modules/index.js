@@ -3,5 +3,7 @@ import dashboard from "./dashboard/index";
 import platform from "./platform/index";
 import employee from "./employee/index";
 
-export default angular.module("modules", [portal, dashboard, platform, employee])
+import demo from "./demo/index";
+
+export default angular.module("modules", [portal, dashboard, platform, employee, demo])
 	.name;
