@@ -1,0 +1,36 @@
+<div class="panel panel-default" ng-init="shoppingCtrl.init()">
+	<div class="panel-heading">
+		Shopping
+	</div>
+	<div class="panel-body">
+		<div>
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>名称</th>
+						<th>单价</th>
+						<th>购买数量</th>
+						<th>价格</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="item in shoppingCtrl.flow.context.goods">
+						<td data-label="名称">{{item.name}}</td>
+						<td data-label="单价">{{item.price}}</td>
+						<td data-label="购买数量">{{item.count}}</td>
+						<td data-label="价格">{{item.count * item.price}}元</td>
+						<td data-label="操作"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<div>
+			
+		</div>
+	</div>
+	<div class="panel-footer">
+		<button class="btn btn-sm btn-primary" ng-click="shoppingCtrl.next()">Next</button>
+	</div>
+</div>
